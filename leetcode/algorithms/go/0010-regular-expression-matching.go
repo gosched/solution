@@ -10,11 +10,7 @@ func isMatch(s string, p string) bool {
 	return s != "" && (s[0] == p[0] || p[0] == '.') && isMatch(s[1:], p[1:])
 }
 
-// func isMatch(s string, p string) bool {
-// 	matched, _ := regexp.MatchString("^"+p+"$", s)
-// 	return matched
-// }
-
+// import "regexp"
 // func isMatch(s string, p string) bool {
 // 	re := regexp.MustCompile("^" + p + "$")
 // 	return re.MatchString(s)
