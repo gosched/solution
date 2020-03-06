@@ -1,16 +1,12 @@
 package leetcode
 
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
-	var len1 = len(nums1)
-	var len2 = len(nums2)
-	var length = len1 + len2
-
+	var len1, len2 = len(nums1), len(nums2)
+	var length = len(nums1) + len(nums2)
 	var mid = length / 2
 	var midLeft = mid - 1
-
-	var last, left, right int
-
 	var i, j, k int
+	var last, left, right int
 
 	for k <= mid && i < len1 && j < len2 {
 		if nums1[i] < nums2[j] {
@@ -31,25 +27,25 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 
 	for k <= mid && i < len1 {
 		last = nums1[i]
+		i++
 		if k == midLeft {
 			left = last
 		}
 		if k == mid {
 			right = last
 		}
-		i++
 		k++
 	}
 
 	for k <= mid && j < len2 {
 		last = nums2[j]
+		j++
 		if k == midLeft {
 			left = last
 		}
 		if k == mid {
 			right = last
 		}
-		j++
 		k++
 	}
 
@@ -62,17 +58,13 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 
 // import "sort"
 // func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
-// 	var result float64
 // 	nums1 = append(nums1, nums2...)
 // 	sort.Ints(nums1)
 // 	var length = len(nums1)
 // 	if length%2 != 0 {
-// 		result = float64(nums1[length/2])
-// 	} else {
-// 		right := length - 1
-// 		result = float64(nums1[right/2]+nums1[right/2+1]) / 2.0
+//         return float64(nums1[length/2])
 // 	}
-// 	return result
+//     return float64(nums1[length/2-1] + nums1[length/2]) / 2.0
 // }
 
 // odd
