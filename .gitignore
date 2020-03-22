@@ -1,2 +1,12 @@
-.DS_Store
-.png
+*.DS_Store
+*.json
+*.pem
+*.txt
+*.md
+*.sql
+*.log
+*.bash
+certificate*/
+database*/
+resource*/
+storage*/
