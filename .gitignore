@@ -6,7 +6,10 @@
 *.sql
 *.log
 *.bash
+
 certificate*/
 database*/
 resource*/
 storage*/
+
+talent-plan*/
