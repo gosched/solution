@@ -71,6 +71,7 @@ func marge(l1, l2 *ListNode) *ListNode {
 //     if (len(lists) == 0) {
 //         return nil
 //     }
+
 //     if (len(lists) == 1) {
 //         return lists[0]
 //     }
